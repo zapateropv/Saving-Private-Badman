@@ -14,3 +14,12 @@ mp_grid_add_instances(global.grid, objCol, false);
 
 // 5. Set depth very low so the debug draw (if you use it) stays on top
 depth = -10000;
+// 1. Add the actual walls
+mp_grid_add_instances(global.grid, objCol, false);
+
+// 2. Add a "Buffer" so they don't hug the edges
+// This marks cells around the wall as 'forbidden' too
+with(objCol) {
+    // This slightly 'fattens' the wall in the eyes of the AI
+    mp_grid_add_rectangle(global.grid, bbox_left-4, bbox_top-4, bbox_right+4, bbox_bottom+4);
+}
