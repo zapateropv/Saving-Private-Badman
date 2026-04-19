@@ -10,6 +10,7 @@ cam_y = clamp(cam_y, 0, room_height - cam_h);
 
 camera_set_view_pos(cam, cam_x, cam_y);
 
+
 // --- INPUT ---
 var h = keyboard_check(vk_right) - keyboard_check(vk_left);
 var v = keyboard_check(vk_down)  - keyboard_check(vk_up);
