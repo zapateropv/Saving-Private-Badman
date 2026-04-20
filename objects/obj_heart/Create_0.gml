@@ -1,0 +1,1 @@
+image_speed = 0; // This stops the hearts from "looping" automatically

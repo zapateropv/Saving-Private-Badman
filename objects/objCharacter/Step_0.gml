@@ -53,6 +53,7 @@ if (is_attacking) {
 }
 
 // --- MOVEMENT ---
+// --- MOVEMENT ---
 if (h != 0 || v != 0) {
     var dir_move = point_direction(0, 0, h, v);
     var hsp = lengthdir_x(moveSpd, dir_move);
@@ -61,17 +62,30 @@ if (h != 0 || v != 0) {
     if (!place_meeting(x + hsp, y, objCol)) x += hsp;
     if (!place_meeting(x, y + vsp, objCol)) y += vsp;
 
-    image_speed = 0.2;
+    image_speed = 0.2; // Keep this speed
 
-    if (h > 0)      { image_index = 16; last_dir = "right"; }
-    else if (h < 0) { image_index = 8;  last_dir = "left";  }
-    else if (v > 0) { image_index = 0;  last_dir = "down";  }
-    else if (v < 0) { image_index = 24; last_dir = "up";    }
+    // ONLY reset the image_index if we aren't already in the right range
+    if (h > 0) { 
+        last_dir = "right"; 
+        if (image_index < 16 || image_index > 23) image_index = 16; 
+    }
+    else if (h < 0) { 
+        last_dir = "left";  
+        if (image_index < 8 || image_index > 15) image_index = 8; 
+    }
+    else if (v > 0) { 
+        last_dir = "down";  
+        if (image_index < 0 || image_index > 7) image_index = 0; 
+    }
+    else if (v < 0) { 
+        last_dir = "up";    
+        if (image_index < 24 || image_index > 31) image_index = 24; 
+    }
 
 } else {
-    // --- IDLE ---
-    image_speed = 0;
+   image_speed = 0; // Stop the animation from playing
 
+    // Snap to the first frame of the direction we were last facing
     switch (last_dir) {
         case "down":  image_index = 0;  break;
         case "left":  image_index = 8;  break;
