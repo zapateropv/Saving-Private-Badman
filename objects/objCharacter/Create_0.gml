@@ -1,19 +1,13 @@
-// --- CAMERA ---
+// Camera Setup
 cam = camera_create_view(0, 0, 320, 180);
 camera_set_view_pos(cam, 0, 0);
 camera_set_view_target(cam, id);
-camera_set_view_speed(cam, 0.5, 0.5);
 
-// --- MOVEMENT ---
-moveSpd = 1;
-
-// --- ANIMATION ---
-image_speed = 0;
-
-// --- LAST FACING DIRECTION ---
+// Variables
+moveSpd = 0.7;
 last_dir = "down";
 
-// --- STATE ---
-state = "idle";
-attack_start = 0;
-attack_end = 7;
+can_shoot = true;
+is_attacking = false;
+
+image_speed = 0;

@@ -39,6 +39,7 @@
   "name":"Saving Private Badman",
   "resources":[
     {"id":{"name":"fnt_Menu","path":"fonts/fnt_Menu/fnt_Menu.yy",},},
+    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_button_help","path":"objects/obj_button_help/obj_button_help.yy",},},
     {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
@@ -68,6 +69,7 @@
     {"id":{"name":"spr_atk_left","path":"sprites/spr_atk_left/spr_atk_left.yy",},},
     {"id":{"name":"spr_atk_right","path":"sprites/spr_atk_right/spr_atk_right.yy",},},
     {"id":{"name":"spr_atk_up","path":"sprites/spr_atk_up/spr_atk_up.yy",},},
+    {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_character_attack","path":"sprites/spr_character_attack/spr_character_attack.yy",},},
     {"id":{"name":"spr_crack_floor","path":"sprites/spr_crack_floor/spr_crack_floor.yy",},},
     {"id":{"name":"spr_crack_walls","path":"sprites/spr_crack_walls/spr_crack_walls.yy",},},
