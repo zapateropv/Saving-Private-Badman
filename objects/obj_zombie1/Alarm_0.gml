@@ -3,4 +3,4 @@ if (instance_exists(objCharacter) && global.grid != -1) {
         path_start(path, move_speed, path_action_stop, false);
     }
 }
-alarm[0] = 20; // Recalculate path every 20 frames
+alarm[0] = 20; // Recalculate every 20 frames
