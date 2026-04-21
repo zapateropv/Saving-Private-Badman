@@ -32,7 +32,7 @@ if (input_fire && can_shoot && !is_attacking) {
     }
 
     // --- CREATE BULLET ---
-    var b = instance_create_layer(x + offset_x, y + offset_y, "Instances_3", obj_bullet);
+    var b = instance_create_layer(x + offset_x, y + offset_y, "ins_character", obj_bullet);
     b.direction = dir;
     b.image_angle = dir;
     b.speed = 5;
