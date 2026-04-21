@@ -3,7 +3,7 @@ grid = -1;
 
 // 2. Set precision. Smaller number = more accurate but uses more memory.
 // Since you have custom stretched walls, 8 is usually the sweet spot.
-var _precision = 8; 
+var _precision = 6; 
 
 // 3. Create the grid
 global.grid = mp_grid_create(0, 0, room_width / _precision, room_height / _precision, _precision, _precision);
