@@ -1,133 +1,50 @@
-var _other = instance_place(x, y, obj_zombie1);
-
-
-
-if (_other != noone && _other.id != id) {
-
-    var repel_dir = point_direction(_other.x, _other.y, x, y);
-
-    var push = 0.5;
-
-    x += lengthdir_x(push, repel_dir);
-
-    y += lengthdir_y(push, repel_dir);
-
+// 1. REPEL LOGIC (Keep your existing improved with loop)
+var push_speed = 0.4; 
+with (obj_zombie1) {
+    if (id != other.id) {
+        if (point_distance(x, y, other.x, other.y) < 18) { 
+            var dir = point_direction(other.x, other.y, x, y);
+            x += lengthdir_x(push_speed, dir);
+            y += lengthdir_y(push_speed, dir);
+        }
+    }
 }
 
-
-
-
-
-// -------------------------------
-
-// 2. CALCULATE MOVEMENT (FIX)
-
-// -------------------------------
-
+// 2. CALCULATE MOVEMENT
 var move_x = x - last_x;
-
 var move_y = y - last_y;
 
-
-
-
-
-// -------------------------------
-
-// 3. ANIMATION (WORKS)
-
-// -------------------------------
-
-if (path_index != -1 && (abs(move_x) > 0.01 || abs(move_y) > 0.01)) {
-
-
-
-    image_speed = 0.2;
-
-
-
-    if (abs(move_x) > abs(move_y)) {
-
-        if (move_x > 0) sprite_index = spr_zombie_right;
-
-        else sprite_index = spr_zombie_left;
-
-    } else {
-
-        if (move_y > 0) sprite_index = spr_zombie_down;
-
-        else sprite_index = spr_zombie_up;
-
-    }
-
-
-
+// 3. ANIMATION & ATTACK LOGIC
+if (is_attacking) {
+    image_speed = 0.3;
+    // We use "or" (||) so the code knows to STAY in the attack sprite
+    if (sprite_index == spr_zombie_left || sprite_index == spr_zombie_atk_left) sprite_index = spr_zombie_atk_left;
+    else if (sprite_index == spr_zombie_right || sprite_index == spr_zombie_atk_right) sprite_index = spr_zombie_atk_right;
+    else if (sprite_index == spr_zombie_up || sprite_index == spr_zombie_atk_up) sprite_index = spr_zombie_atk_up;
+    else if (sprite_index == spr_zombie_down || sprite_index == spr_zombie_atk_down) sprite_index = spr_zombie_atk_down;
 } else {
-
-    image_speed = 0;
-
-    image_index = 0;
-
+    // 2. ONLY WALK IF NOT ATTACKING
+    if (abs(move_x) > 0.1 || abs(move_y) > 0.1) {
+        image_speed = 0.2;
+        if (abs(move_x) > abs(move_y)) {
+            sprite_index = (move_x > 0) ? spr_zombie_right : spr_zombie_left;
+        } else {
+            sprite_index = (move_y > 0) ? spr_zombie_down : spr_zombie_up;
+        }
+    } else {
+        image_speed = 0;
+        image_index = 0;
+    }
 }
 
-
-
-
-
-// -------------------------------
-
-// 4. SAVE POSITION
-
-// -------------------------------
+// 4. TRIGGER ATTACK
+if (instance_exists(objCharacter) && !is_attacking) {
+    if (place_meeting(x, y, objCharacter)) {
+        is_attacking = true;   
+        image_index = 0;       
+        path_end();            
+    }
+}
 
 last_x = x;
-
 last_y = y;
-
-
-
-
-
-// -------------------------------
-
-// 5. HIT TIMER
-
-// -------------------------------
-
-if (hit_timer > 0) {
-
-    hit_timer--;
-
-    if (hit_timer <= 0) image_blend = c_white;
-
-}
-
-
-
-
-
-// -------------------------------
-
-// 6. ATTACK PLAYER
-
-// -------------------------------
-
-if (instance_exists(objCharacter)) {
-
-    if (place_meeting(x, y, objCharacter)) {
-
-        if (alarm[1] <= 0) {
-
-            with (objCharacter) {
-
-                hp -= 1;
-
-            }
-
-            alarm[1] = 60;
-
-        }
-
-    }
-
-}

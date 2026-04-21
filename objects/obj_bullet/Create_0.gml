@@ -1,5 +1,8 @@
-// This tells the bullet how many pixels to move per frame
-speed = 0.1;
+// 1. SET MOVEMENT
+speed = 8;           // The bullet moves 8 pixels every frame
+image_angle = direction; // Rotates the sprite to match where it's flying
 
-// Make sprite face movement direction
-image_angle = direction;
+// 2. RANGE TRACKING
+start_x = x;         // Saves the exact spot the bullet was born
+start_y = y;         // Saves the exact spot the bullet was born
+max_range = 100;     // The bullet will travel exactly 100 pixels
