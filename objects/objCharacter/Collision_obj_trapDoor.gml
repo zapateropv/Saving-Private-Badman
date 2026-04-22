@@ -10,4 +10,10 @@ else if (room == Room2) {
     global.target_y = 121;
 }
 
+else if (room == Room4) {
+    global.target_room = Room5;
+    global.target_x = 100; // New coordinates for Room 4
+    global.target_y = 121;
+}
+
 room_goto(global.target_room);
