@@ -6,7 +6,7 @@ if (room == Room1) {
 } 
 else if (room == Room2) {
     global.target_room = Room4;
-    global.target_x = 50; // New coordinates for Room 4
+    global.target_x = 100; // New coordinates for Room 4
     global.target_y = 121;
 }
 
