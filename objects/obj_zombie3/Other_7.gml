@@ -1,7 +1,7 @@
 if (is_attacking) {
     // Damage happens only NOW, at the end of the swing
     if (instance_exists(objCharacter) && place_meeting(x, y, objCharacter)) {
-        objCharacter.hp -= 0.5; // Deals half-heart damage
+        objCharacter.hp -= 1.5; // Deals half-heart damage
     }
     
     is_attacking = false; // Reset so he can walk or attack again

@@ -4,5 +4,5 @@ if (can_be_hit) {
     alarm[0] = 40;     // Stay invincible for a moment
     image_blend = c_red; 
     
-    if (hp <= 0) room_restart(); 
+    if (hp <= 0) room_goto(Room1) 
 }

@@ -1,3 +1,13 @@
+// 0. DEATH LOGIC
+// DEATH LOGIC
+if (hp <= 0) {
+    // Create the key on the "Instances" layer
+    instance_create_layer(x, y, "Instances", obj_key);
+    
+    // Destroy the zombie
+    instance_destroy();
+}
+
 // 1. REPEL LOGIC (Keep your existing improved with loop)
 var push_speed = 0.4; 
 with (obj_zombie3) {
@@ -48,3 +58,5 @@ if (instance_exists(objCharacter) && !is_attacking) {
 
 last_x = x;
 last_y = y;
+
+

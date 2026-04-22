@@ -1,6 +1,6 @@
 // --- INPUT ---
-var h = keyboard_check(vk_right) - keyboard_check(vk_left);
-var v = keyboard_check(vk_down)  - keyboard_check(vk_up);
+var h = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var input_fire = mouse_check_button_pressed(mb_left);
 
 // --- START ATTACK ---
@@ -43,7 +43,6 @@ if (is_attacking) {
     if (image_index >= image_number - 1) {
         is_attacking = false;
         can_shoot = true;
-
         sprite_index = rifleman_old;
         image_speed = 0;
         image_index = 0;
@@ -92,4 +91,9 @@ if (h != 0 || v != 0) {
         case "right": image_index = 16; break;
         case "up":    image_index = 24; break;
     }
+}
+
+if (hp <= 0) {
+    hp = 6;            // Reset HP to full (6 half-hearts)
+    room_goto(Room1);  // Then go to the starting room
 }
