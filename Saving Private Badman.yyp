@@ -35,7 +35,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.221",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Saving Private Badman",
   "resources":[
@@ -69,6 +69,10 @@
     {"id":{"name":"snd_bullet_impact","path":"sounds/snd_bullet_impact/snd_bullet_impact.yy",},},
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
     {"id":{"name":"snd_menu","path":"sounds/snd_menu/snd_menu.yy",},},
+    {"id":{"name":"snd_menu1","path":"sounds/snd_menu1/snd_menu1.yy",},},
+    {"id":{"name":"snd_room1","path":"sounds/snd_room1/snd_room1.yy",},},
+    {"id":{"name":"snd_room2","path":"sounds/snd_room2/snd_room2.yy",},},
+    {"id":{"name":"snd_room3","path":"sounds/snd_room3/snd_room3.yy",},},
     {"id":{"name":"snd_zombie_bite","path":"sounds/snd_zombie_bite/snd_zombie_bite.yy",},},
     {"id":{"name":"decorative_cracks_walls","path":"sprites/decorative_cracks_walls/decorative_cracks_walls.yy",},},
     {"id":{"name":"decorative_cracks_walls8","path":"sprites/decorative_cracks_walls8/decorative_cracks_walls8.yy",},},
