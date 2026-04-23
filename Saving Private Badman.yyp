@@ -91,6 +91,7 @@
     {"id":{"name":"spr_character_health","path":"sprites/spr_character_health/spr_character_health.yy",},},
     {"id":{"name":"spr_crack_floor","path":"sprites/spr_crack_floor/spr_crack_floor.yy",},},
     {"id":{"name":"spr_crack_walls","path":"sprites/spr_crack_walls/spr_crack_walls.yy",},},
+    {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"spr_ground_walls","path":"sprites/spr_ground_walls/spr_ground_walls.yy",},},
     {"id":{"name":"spr_help_button","path":"sprites/spr_help_button/spr_help_button.yy",},},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},},
