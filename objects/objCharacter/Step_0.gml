@@ -4,15 +4,20 @@ var v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var input_fire = mouse_check_button_pressed(mb_left);
 
 // --- START ATTACK ---
+// --- START ATTACK ---
 if (input_fire && can_shoot && !is_attacking) {
     is_attacking = true;
     can_shoot = false;
+
+    // --- PLAY SOUND HERE ---
+    audio_play_sound(snd_gunshot, 10, false);
 
     image_index = 0;
     image_speed = 1;
 
     var dir = 0;
 
+    // This handles your sprite changes correctly based on direction
     switch (last_dir) {
         case "right": sprite_index = spr_atk_right; dir = 0;   break;
         case "left":  sprite_index = spr_atk_left;  dir = 180; break;
@@ -20,10 +25,9 @@ if (input_fire && can_shoot && !is_attacking) {
         case "down":  sprite_index = spr_atk_down;  dir = 270; break;
     }
 
-    // --- BULLET OFFSET (FIXED) ---
+    // --- BULLET OFFSET ---
     var offset_x = 0;
     var offset_y = 0;
-
     switch (last_dir) {
         case "right": offset_x = 12;  offset_y = 0;   break;
         case "left":  offset_x = -12; offset_y = 0;   break;
@@ -37,7 +41,6 @@ if (input_fire && can_shoot && !is_attacking) {
     b.image_angle = dir;
     b.speed = 5;
 }
-
 // --- ATTACK STATE ---
 if (is_attacking) {
     if (image_index >= image_number - 1) {
