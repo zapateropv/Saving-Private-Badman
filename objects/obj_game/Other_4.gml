@@ -12,3 +12,40 @@ if (instance_exists(objCharacter)) {
     camera_set_view_target(view_camera[0], objCharacter);
     camera_set_view_border(view_camera[0], 1280, 720);
 }
+
+//Initialize
+current_music = -1;
+var new_music;
+
+// Assign music depending on room
+switch (room)
+{
+    case Room2:
+        new_music = snd_room1;
+        break;
+
+    case Room4:
+        new_music = snd_room2;
+        break;
+
+    case Room5:
+        new_music = snd_room3;
+        break;
+
+    default:
+        new_music = -1;
+        break;
+}
+
+// If music is different, change it
+if (current_music != new_music)
+{
+    audio_stop_all();
+
+    if (new_music != -1)
+    {
+        audio_play_sound(new_music, 1, true);
+    }
+
+    current_music = new_music;
+}
