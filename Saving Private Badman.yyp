@@ -35,7 +35,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2024.14.4.221",
   },
   "name":"Saving Private Badman",
   "resources":[
@@ -46,6 +46,7 @@
     {"id":{"name":"obj_button_help","path":"objects/obj_button_help/obj_button_help.yy",},},
     {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
+    {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_heart","path":"objects/obj_heart/obj_heart.yy",},},
     {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},},
@@ -141,6 +142,7 @@
     {"id":{"name":"spri_rain","path":"sprites/spri_rain/spri_rain.yy",},},
     {"id":{"name":"sprInterior","path":"sprites/sprInterior/sprInterior.yy",},},
     {"id":{"name":"Sprite27","path":"sprites/Sprite27/Sprite27.yy",},},
+    {"id":{"name":"Sprite72","path":"sprites/Sprite72/Sprite72.yy",},},
     {"id":{"name":"sprTiles","path":"sprites/sprTiles/sprTiles.yy",},},
     {"id":{"name":"sTiles","path":"sprites/sTiles/sTiles.yy",},},
     {"id":{"name":"torch_1","path":"sprites/torch_1/torch_1.yy",},},
