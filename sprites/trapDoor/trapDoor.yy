@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"trapDoor",
   "bboxMode":0,
-  "bbox_bottom":19,
+  "bbox_bottom":15,
   "bbox_left":0,
-  "bbox_right":19,
+  "bbox_right":15,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"c1edbd80-e5d2-4536-92f2-c340f3819b34","name":"c1edbd80-e5d2-4536-92f2-c340f3819b34","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c8a5280f-f17a-4291-8166-6821860ebb11","name":"c8a5280f-f17a-4291-8166-6821860ebb11","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":20,
+  "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"04200939-69a3-4343-abe5-8b017090d577","blendMode":0,"displayName":"default","isLocked":false,"name":"04200939-69a3-4343-abe5-8b017090d577","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"af08d08e-c529-4550-a5ca-44548293aaf6","blendMode":0,"displayName":"default","isLocked":false,"name":"af08d08e-c529-4550-a5ca-44548293aaf6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"trapDoor",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1edbd80-e5d2-4536-92f2-c340f3819b34","path":"sprites/trapDoor/trapDoor.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"86fbe43b-7f2b-4652-ae34-3539f7d67bfa","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8a5280f-f17a-4291-8166-6821860ebb11","path":"sprites/trapDoor/trapDoor.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6894c6f8-bccf-4ba2-a563-751992509ca8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":20,
+  "width":16,
 }
