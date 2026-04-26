@@ -39,3 +39,4 @@ if (enemies_cleared) {
     if (instance_exists(obj_zombie2)) show_debug_message("obj_zombie2 still exists");
     if (instance_exists(obj_zombie3)) show_debug_message("obj_zombie3 still exists");
 }
+

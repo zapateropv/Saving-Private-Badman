@@ -55,6 +55,7 @@
     {"id":{"name":"obj_setup","path":"objects/obj_setup/obj_setup.yy",},},
     {"id":{"name":"obj_smoke_hit","path":"objects/obj_smoke_hit/obj_smoke_hit.yy",},},
     {"id":{"name":"obj_snd_menu","path":"objects/obj_snd_menu/obj_snd_menu.yy",},},
+    {"id":{"name":"obj_timer","path":"objects/obj_timer/obj_timer.yy",},},
     {"id":{"name":"obj_trapDoor","path":"objects/obj_trapDoor/obj_trapDoor.yy",},},
     {"id":{"name":"obj_zombie1","path":"objects/obj_zombie1/obj_zombie1.yy",},},
     {"id":{"name":"obj_zombie2","path":"objects/obj_zombie2/obj_zombie2.yy",},},

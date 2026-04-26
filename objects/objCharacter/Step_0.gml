@@ -100,3 +100,28 @@ if (hp <= 0) {
     hp = 6;            // Reset HP to full (6 half-hearts)
     room_goto(Room1);  // Then go to the starting room
 }
+
+// Step Event
+if (keyboard_check_pressed(ord("F"))) {
+    // Find the nearest badman
+    var _npc = instance_nearest(x, y, obj_badman);
+    
+    // Check if he exists and is close enough (64 pixels)
+    if (_npc != noone && distance_to_object(_npc) < 10) {
+        
+        // This "with" block lets the player run code inside the badman object
+        with (_npc) {
+            if (!is_talking) {
+                is_talking = true;
+                text_page = 0;
+            } else {
+                text_page++; // Move to next line
+                
+                // If we hit the end of the array, stop talking
+                if (text_page >= array_length(text_lines)) {
+                    is_talking = false;
+                }
+            }
+        }
+    }
+}
