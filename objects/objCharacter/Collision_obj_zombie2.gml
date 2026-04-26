@@ -9,27 +9,26 @@ if (can_be_hit) {
     alarm[0] = 40;     // Stay invincible for a moment
     image_blend = c_red; 
 	
- if (hp <= 0) {
-    // 1. Reset health and timer
+   
+if (hp <= 0) {
+    // 1. Reset health
     hp = 6; 
+
+    // 2. Reset timer if exists
     if (instance_exists(obj_timer)) {
-        obj_timer.game_timer = 30; 
+        obj_timer.game_timer = 60; 
     }
 
-    // 2. Set the target global variables (for other rooms)
+    // 3. Set respawn target
     global.target_x = 130; 
     global.target_y = 64;
-    global.target_room = Room1;
+    global.target_room = rm_home;
 
-    // 3. FORCE SNAP IMMEDIATELY (This fixes the "Same Room" bug)
-    x = 130;
-    y = 64;
-
-    // 4. Go to Room1
-    if (room == Room1) {
-        room_restart(); // If already in Room1, restart it properly
+    // 4. Go to room (restart if same)
+    if (room == rm_home) {
+        room_restart();
     } else {
-        room_goto(Room1); // If in another room, travel back
+        room_goto(rm_home);
     }
 }
 }

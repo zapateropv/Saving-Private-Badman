@@ -5,20 +5,20 @@ if (enemies_cleared) {
     
     // 2. Logic for transitioning - using a switch statement is cleaner for room checks
     switch (room) {
-        case Room1:
-            global.target_room = Room2;
+        case rm_home:
+            global.target_room = rm_level1;
             global.target_x = 266;
             global.target_y = 38;
             break;
             
-        case Room2:
-            global.target_room = Room4;
+        case rm_level1:
+            global.target_room = rm_level2;
             global.target_x = 268;
             global.target_y = 39;
             break;
             
-        case Room4:
-            global.target_room = Room5;
+        case rm_level2:
+            global.target_room = rm_level3;
             global.target_x = 28;
             global.target_y = 92;
             break;

@@ -1,5 +1,7 @@
-draw_set_color(c_white);
+var _mins = floor(game_timer / 60);
+var _secs = floor(game_timer % 60);
 
-// I increased the second number (Y) from 20 to 80
-// Adjust 80 higher if it is still touching the hearts
-draw_text(20, 80, "TIME LEFT: " + string(ceil(game_timer)));
+// This ensures there are at least 2 digits for seconds, padding with a 0
+var _time_string = string(_mins) + ":" + string_replace_all(string_format(_secs, 2, 0), " ", "0");
+
+draw_text(20, 80, "TIME LEFT: " + _time_string);

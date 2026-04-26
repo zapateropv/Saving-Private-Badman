@@ -13,7 +13,7 @@ switch (current_room) {
         }
     break;
 
-    case Room2:
+    case rm_level1:
         // Moving from Menu to first gameplay area
         if (!audio_is_playing(snd_room1)) {
             audio_stop_sound(snd_menu1); 
@@ -21,7 +21,7 @@ switch (current_room) {
         }
     break;
 	
-    case Room4:
+    case rm_level2:
         // Transition to second gameplay area
         if (!audio_is_playing(snd_room2)) {
             audio_stop_sound(snd_room1); // Stop the track from Room2
@@ -29,7 +29,7 @@ switch (current_room) {
         }
     break;
 	
-    case Room5:
+    case rm_level3:
         // Transition to third gameplay area
         if (!audio_is_playing(snd_room3)) {
             audio_stop_sound(snd_room2); // Stop the track from Room4
