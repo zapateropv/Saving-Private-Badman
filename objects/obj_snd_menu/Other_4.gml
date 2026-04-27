@@ -36,5 +36,13 @@ switch (current_room) {
             audio_play_sound(snd_room3, 10, true);
         }
     break;
+	
+	 case rm_over:
+        // Transition to third gameplay area
+        if (!audio_is_playing(snd_menu)) {
+            audio_stop_sound(snd_room3); // Stop the track from Room4
+            audio_play_sound(snd_menu, 10, true);
+        }
+    break;
 }
 

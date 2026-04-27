@@ -85,13 +85,12 @@ if (keyboard_check_pressed(ord("F"))) {
                 text_page = 0;
             } else {
                 text_page++;
-               if (text_page >= array_length(text_lines)) {
+             if (text_page >= array_length(text_lines)) {
     is_talking = false;
 
-    // go to ending room
+    with (objCharacter) instance_destroy();
     room_goto(rm_over);
-}
-            }
+}       }
         }
     }
 }
