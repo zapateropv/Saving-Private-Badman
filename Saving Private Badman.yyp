@@ -52,6 +52,7 @@
     {"id":{"name":"obj_heart","path":"objects/obj_heart/obj_heart.yy",},},
     {"id":{"name":"obj_instruction","path":"objects/obj_instruction/obj_instruction.yy",},},
     {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},},
+    {"id":{"name":"obj_over","path":"objects/obj_over/obj_over.yy",},},
     {"id":{"name":"obj_potion","path":"objects/obj_potion/obj_potion.yy",},},
     {"id":{"name":"obj_rain","path":"objects/obj_rain/obj_rain.yy",},},
     {"id":{"name":"obj_setup","path":"objects/obj_setup/obj_setup.yy",},},
@@ -70,6 +71,7 @@
     {"id":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"id":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"id":{"name":"rm_over","path":"rooms/rm_over/rm_over.yy",},},
     {"id":{"name":"snd_bullet_impact","path":"sounds/snd_bullet_impact/snd_bullet_impact.yy",},},
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
     {"id":{"name":"snd_menu","path":"sounds/snd_menu/snd_menu.yy",},},
@@ -171,6 +173,7 @@
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_home","path":"rooms/rm_home/rm_home.yy",},},
     {"roomId":{"name":"rm_help","path":"rooms/rm_help/rm_help.yy",},},
+    {"roomId":{"name":"rm_over","path":"rooms/rm_over/rm_over.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

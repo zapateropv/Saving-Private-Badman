@@ -1,5 +1,8 @@
 // Ammo UI (top-right, larger font)
 
+
+if (room != rm_over) {
+
 draw_set_font(fnt_ui); // use your bigger font asset
 draw_set_color(c_white);
 
@@ -23,3 +26,5 @@ if (is_reloading) {
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+   
+}

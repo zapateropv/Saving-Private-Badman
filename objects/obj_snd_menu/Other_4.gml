@@ -1,6 +1,6 @@
 // Inside obj_audio_manager -> Other -> Room Start
 
-/*
+
 var current_room = room;
 
 switch (current_room) {
@@ -38,4 +38,3 @@ switch (current_room) {
     break;
 }
 
-*/
