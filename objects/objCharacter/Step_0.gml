@@ -76,25 +76,42 @@ if (h != 0 || v != 0) {
 
 // --- INTERACT ---
 if (keyboard_check_pressed(ord("F"))) {
+
     var _npc = instance_nearest(x, y, obj_badman);
 
     if (_npc != noone && distance_to_object(_npc) < 10) {
+
         with (_npc) {
+
             if (!is_talking) {
                 is_talking = true;
                 text_page = 0;
-            } else {
-                text_page++;
-             if (text_page >= array_length(text_lines)) {
-    is_talking = false;
 
-    with (objCharacter) instance_destroy();
-    room_goto(rm_over);
-}       }
+                // STOP TIMER
+                if (instance_exists(obj_timer)) {
+                    obj_timer.timer_running = false;
+                }
+
+            } else {
+
+                text_page++;
+
+                if (text_page >= array_length(text_lines)) {
+
+                    is_talking = false;
+
+                    // optional: resume or keep stopped
+                    if (instance_exists(obj_timer)) {
+                        obj_timer.timer_running = true;
+                    }
+
+                    with (objCharacter) instance_destroy();
+                    room_goto(rm_over);
+                }
+            }
         }
     }
 }
-
 // --- RELOAD ---
 if (keyboard_check_pressed(ord("R"))) {
     if (ammo < max_ammo && !is_reloading) {

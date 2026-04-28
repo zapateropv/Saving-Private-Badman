@@ -14,7 +14,7 @@ if (can_be_hit) {
 if (hp <= 0) {
     // 1. Reset health
     hp = 6; 
-
+global.score = 0;
     // 2. Reset timer if exists
     if (instance_exists(obj_timer)) {
         obj_timer.game_timer = 60; 

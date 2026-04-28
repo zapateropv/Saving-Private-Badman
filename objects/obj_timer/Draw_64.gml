@@ -1,21 +1,17 @@
-// Check the current room
-switch (room) {
-    case rm_level1:
-    case rm_level2:
-    case rm_level3:
-        // Logic for calculating time
-        var _mins = floor(game_timer / 60);
-        var _secs = floor(game_timer % 60);
+// Only draw corner HUD in level rooms (not on Game Over screen)
+if (room == rm_level1 || room == rm_level2 || room == rm_level3) {
+    var _mins = floor(game_timer / 60);
+    var _secs = floor(game_timer % 60);
 
-        // This ensures there are at least 2 digits for seconds
-        var _time_string = string(_mins) + ":" + string_replace_all(string_format(_secs, 2, 0), " ", "0");
+    // Reliable padding for the "01" seconds issue
+    var _s_str = string(_secs);
+    if (_secs < 10) _s_str = "0" + _s_str;
 
-        // Draw the text
-        draw_set_color(c_white); // Good practice to set color before drawing text
-        draw_text(20, 80, "TIME LEFT: " + _time_string);
-    break;
-
-    default:
-        // Do nothing for rm_menu and rm_over
-    break;
+    draw_set_font(fnt_ui);
+    draw_set_color(c_white);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    
+    // Y set to 120 so it stays clear of your "BACK" button
+    draw_text(20, 120, "TIME LEFT: " + string(_mins) + ":" + _s_str);
 }

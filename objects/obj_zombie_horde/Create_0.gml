@@ -1,0 +1,1 @@
+global.horde_sound = -1;

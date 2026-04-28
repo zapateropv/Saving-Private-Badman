@@ -10,7 +10,7 @@ if (can_be_hit) {
     if (hp <= 0) {
 
         hp = 6;
-
+	global.score = 0;
         if (instance_exists(obj_timer)) {
             obj_timer.game_timer = 60; 
         }
