@@ -22,6 +22,8 @@ if (enemies_cleared) {
             global.target_x = 28;
             global.target_y = 92;
             break;
+			
+	
             
         default:
             show_debug_message("Room not recognized in transition logic!");

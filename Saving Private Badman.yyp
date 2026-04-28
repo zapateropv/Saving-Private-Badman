@@ -117,6 +117,7 @@
     {"id":{"name":"spr_quit_button","path":"sprites/spr_quit_button/spr_quit_button.yy",},},
     {"id":{"name":"spr_shoot","path":"sprites/spr_shoot/spr_shoot.yy",},},
     {"id":{"name":"spr_smoke","path":"sprites/spr_smoke/spr_smoke.yy",},},
+    {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
     {"id":{"name":"spr_walls_floor","path":"sprites/spr_walls_floor/spr_walls_floor.yy",},},
     {"id":{"name":"spr_zombie_atk_down","path":"sprites/spr_zombie_atk_down/spr_zombie_atk_down.yy",},},
     {"id":{"name":"spr_zombie_atk_left","path":"sprites/spr_zombie_atk_left/spr_zombie_atk_left.yy",},},
