@@ -1,6 +1,6 @@
 path = path_add();
 
-move_speed = 0.3;
+move_speed = 0.4;
 hp = 1;
 
 is_attacking = false;

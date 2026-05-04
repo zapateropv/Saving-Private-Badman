@@ -42,6 +42,7 @@
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"fnt_over","path":"fonts/fnt_over/fnt_over.yy",},},
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
+    {"id":{"name":"Font4","path":"fonts/Font4/Font4.yy",},},
     {"id":{"name":"obj_badman","path":"objects/obj_badman/obj_badman.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_button_back","path":"objects/obj_button_back/obj_button_back.yy",},},
